@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://your-portfolio.vercel.app'),
+  metadataBase: new URL('https://ayushbhandari1.com.np'),
   title: "Ayush Bhandari - AI Solutions Architect & Machine Learning Engineer",
   description:
     "Portfolio website of Ayush Bhandari, showcasing expertise in AI, machine learning, and quantitative finance.",
