@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hsuyaa12.github.io/Personal-Portfolio'),
   title: "Ayush Bhandari - AI Solutions Architect & Machine Learning Engineer",
   description:
     "Portfolio website of Ayush Bhandari, showcasing expertise in AI, machine learning, and quantitative finance.",
