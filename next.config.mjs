@@ -8,7 +8,6 @@ try {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/Personal-Portfolio',
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -18,6 +17,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  assetPrefix: '/Personal-Portfolio',
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
