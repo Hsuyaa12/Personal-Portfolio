@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: '/Personal-Portfolio',
-  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -10,9 +7,8 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    domains: ['hebbkx1anhila5yf.public.blob.vercel-storage.com'],
   },
-  assetPrefix: '/Personal-Portfolio',
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,

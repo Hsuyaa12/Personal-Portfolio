@@ -3,12 +3,11 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import Script from 'next/script'
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://hsuyaa12.github.io/Personal-Portfolio'),
+  metadataBase: new URL('https://your-portfolio.vercel.app'),
   title: "Ayush Bhandari - AI Solutions Architect & Machine Learning Engineer",
   description:
     "Portfolio website of Ayush Bhandari, showcasing expertise in AI, machine learning, and quantitative finance.",
@@ -34,9 +33,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <Script src="/Personal-Portfolio/spa-redirect.js" strategy="beforeInteractive" />
-      </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
