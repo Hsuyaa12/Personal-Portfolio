@@ -1,13 +1,8 @@
-let userConfig = undefined
-try {
-  userConfig = await import('./v0-user-next.config')
-} catch (e) {
-  // ignore error
-}
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  basePath: '/Personal-Portfolio',
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -24,8 +19,6 @@ const nextConfig = {
     parallelServerCompiles: true,
   },
 }
-
-mergeConfig(nextConfig, userConfig)
 
 function mergeConfig(nextConfig, userConfig) {
   if (!userConfig) {
@@ -45,6 +38,15 @@ function mergeConfig(nextConfig, userConfig) {
       nextConfig[key] = userConfig[key]
     }
   }
+}
+
+// Try to load user config
+let userConfig = undefined
+try {
+  userConfig = await import('./v0-user-next.config')
+  mergeConfig(nextConfig, userConfig)
+} catch (e) {
+  // ignore error
 }
 
 export default nextConfig
